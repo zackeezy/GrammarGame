@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Hyphens, Parentheses, and Italics: How do they work?</title>
+<style>
+.main{
+	width:100%;
+}
+.header_one{
+	width:100%;
+	text-align:center;
+}
+.header_two{
+	width:100%;
+	text-align:center;
+}
+.home_page{
+	visibility:visible;
+	width:100%;
+	position:relative;
+}
+.game{
+	visibility:hidden;
+	width:100%;
+	position:relative;
+}
+p{
+	text-align:center;
+}
+.play_button{
+	text-align:center;
+}
+input.play_button{
+	font-weight: bold;
+}
+.game_mode{
+	text-align:left;
+}
+input{
+	border:outset;
+}
+input:hover{
+	border:inset;
+}
+input:focus{
+	outline-width: 0;
+}
+button{
+	border:outset;
+}
+button:hover{
+	border:inset;
+}
+button:focus{
+	outline-width: 0;
+}
+
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css" />
+<script src="GrammarGame.js"></script>
+<head>
+<body>
+<div class="container">
+	<div class="main">
+		<h1 class="header_one">Grammar Game</h1>
+		<h3 class="header_two"><em>Hyphens, Parentheses, and Italics</em></h3>
+	</div>
+	<div class="home_page">
+		<p>Welcome to the Grammar Game. Learn how to use -hyphens-, (parentheses), and <em>italics</em>. 
+		<br/>Press play to get started!</p>
+		<div class="play_button"><input class="play_button" type="button" id="play" value="PLAY"/></div>
+	</div>
+	<div class="game">
+		<div class="game_mode">
+		<ul class="list-inline">
+		<li>
+		<select id="mode" class="form-control">
+		<option value="normal" selected="selected">Normal Mode</option>
+		<option value="medium">Medium Mode</option>
+		<option value="hard">Hard Mode</option>
+		</select>
+		</li>
+		<li>
+		<input type="button" name="mode_change" value="CHANGE MODE" id="mode_change" />
+		</li>
+		</ul>
+		</div>
+		<br />
+		<form id="game_form">
+		<div id="questions">
+			<p id="question"></p>
+			<ul id="options" class="list-unstyled">
+				<li> <label><input type='radio' id="option_1" value="option_1" name="options" /></label> </li>
+				<li> <label><input type='radio' id="option_2" value="option_2" name="options" /></label> </li>
+				<li> <label><input type='radio' id="option_3" value="option_3" name="options" /></label> </li>
+			</ul>
+		</div>
+		<button type="submit">Check Answer(s)</button>
+		</form>
+		<br />
+		<p id="form_response_container"><span class="h3">Feedback:</span><br /><samp id="form_response"></samp></p>
+		<br />
+		<input type="button" name="reset" value="EXIT GAME" id="reset" />
+	</div>
+</div>
+</body>
+</html>
